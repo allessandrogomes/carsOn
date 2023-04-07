@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&family=Big+Shoulders+Display:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    backgroundImage: {
+                        'lupa': "url('/img/header/lupa.svg')",
+                        'banner': "url('/img/chamada/banner.svg')"
+                    },
+                    backgroundPosition: {
+                        'lupa-position': '95%'
+                    },
+                    fontFamily: {
+                        'archivo': ['Archivo', 'sans-serif'],
+                        'big-shoulders-display': ['Big Shoulders Display', 'sans-serif']
+
+                    },
+                    height: {
+                        '400': '400px'
+                    },
+                    fontSize: {
+                        'font-56px': '56px',
+                        'font-10px': '10px'
+                    },
+                    width: {
+                        'width-340px': '340px',
+                        'width-300px': '300px',
+                        'width-7%': '7%'
+                    },
+                    colors: {
+                        'color1': '#0B2926',
+                        'color2': '#38BCAC',
+                        'color3': '#A4B3B5',
+                        'color4': '#FAFAFA'
+                    },
+                    borderRadius: {
+                        'borde-radius-32px': '32px'
+                    },
+                    maxWidth: {
+                        '90%': '90%'
+                    }
+                }
+            }
+        }
+    </script>
+    <title>CarsOn</title>
+</head>
+
+<body class="overflow-x-hidden">
+    <header class="h-28 bg-teal-400 flex justify-between items-center px-6">
+        <div class="flex justify-around around w-1/2">
+            <img class="h-12 cursor-pointer" src="./img/header/carson-logo.svg" alt="Cars On Logo">
+            <div class="w-1/2 flex items-center ">
+                <input class="w-full h-12 rounded-full p-4 font-archivo text-sm outline-none"
+                    placeholder="Digite um modelo ou marca..." type="text" style="background-position-x: 95%;">
+                <a href="#" class="text-gray-600 hover:text-gray-800 relative right-7">
+                    <img class="bg-white" src="./img/header/lupa.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="flex justify-around w-96">
+            <button
+                class="bg-white h-12 w-32 rounded-full text-teal-400 font-bold hover:text-teal-500 transition delay-75 ease-in-out">Anunciar</button>
+            <div class="flex w-24 h-10 items-center justify-between">
+                <h5 class="text-white font-normal cursor-pointer hover:font-medium transition delay-75 ease-in-out">Chat
+                </h5>
+                <img class="h-10 cursor-pointer" src="./img/header/message.svg" alt="Imagem Chat">
+            </div>
+            <div class="flex w-24 h-10 items-center justify-between">
+                <h5 class="text-white font-normal cursor-pointer hover:font-medium transition delay-75 ease-in-out">
+                    Entrar</h5>
+                <img class="h-10 cursor-pointer" src="./img/header/user.svg" alt="Imagem Chat">
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="h-400 bg-banner bg-no-repeat bg-cover bg-teal-400 flex flex-col items-center justify-center">
+            <h1 class="text-font-56px font-big-shoulders-display font-black text-white">Carros é na CarsOn</h1>
+            <h2 class="font-archivo text-white text-2xl font-medium">Compra e venda de veículos</h2>
+        </section>
+        <div class="flex">
+            <section class="w-width-340px flex flex-col m-6">
+                <div class="flex pb-4">
+                    <img class="mr-2" src="./img/filtros/icone-localizacao.svg" alt="Ícone localização do estado">
+                    <h4 class="font-archivo text-lg text-color1">Escolha o seu estado</h4>
+                </div>
+                <div class="flex flex-wrap w-80">
+                    <h5 class="btnEstado w-11 h-10 text-zinc-400 uppercase font-archivo cursor-pointer">sp</h5>
+                    <h5 class="btnEstado w-11 h-10 text-zinc-400 uppercase font-archivo cursor-pointer">rj</h5>
+                    <h5 class="btnEstado w-11 h-10 text-zinc-400 uppercase font-archivo cursor-pointer">mt</h5>
+                    <h5 class="btnEstado w-11 h-10 text-zinc-400 uppercase font-archivo cursor-pointer">mg</h5>
+                    <h5 class="btnEstado w-11 h-10 text-zinc-400 uppercase font-archivo cursor-pointer">al</h5>
+                    <h5 class="btnEstado w-11 h-10 text-zinc-400 uppercase font-archivo cursor-pointer">ba</h5>
+                    <h5 class="btnEstado w-11 h-10 text-zinc-400 uppercase font-archivo cursor-pointer">rs</h5>
+                    <h5 class="btnEstado w-11 h-10 text-zinc-400 uppercase font-archivo cursor-pointer">ma</h5>
+                    <h5 class="btnEstado w-11 h-10 text-zinc-400 uppercase font-archivo cursor-pointer">am</h5>
+                    <h5 class="btnEstado w-11 h-10 text-zinc-400 uppercase font-archivo cursor-pointer">to</h5>
+                    <h5 class="btnEstado w-11 h-10 text-zinc-400 uppercase font-archivo cursor-pointer">go</h5>
+                    <h5 class="btnEstado w-11 h-10 text-zinc-400 uppercase font-archivo cursor-pointer">pi</h5>
+                    <h5 class="btnEstado w-11 h-10 text-zinc-400 uppercase font-archivo cursor-pointer">pe</h5>
+                    <h5 class="btnEstado w-11 h-10 text-zinc-400 uppercase font-archivo cursor-pointer">ac</h5>
+                </div>
+                <div class="h-px w-width-300px bg-zinc-300 relative my-5 right-1.5"></div>
+                <div class="flex pb-4">
+                    <img class="mr-2" src="./img/filtros/icone-cor.svg" alt="Ícone localização do estado">
+                    <h4 class="font-archivo text-lg text-color1">Cor</h4>
+                </div>
+                <div class="text-font-10px text-center flex flex-wrap w-80">
+                    <div class="filtroCor border-transparent border-2 border-teal-400 bg-slate-100 h-5 w-1/6 mr-7 mb-4 cursor-pointer"><h4 class="relative top-0.1 font-bold text-color3">Branco</h4></div>
+                    <div class="filtroCor border-transparent border-2 border-teal-400 bg-zinc-950 h-5 w-1/6 mr-7 mb-4 cursor-pointer"><h4 class="font-bold relative top-0.1 text-color3">Preto</h4></div>
+                    <div class="filtroCor border-transparent border-2 border-teal-400 bg-zinc-700 h-5 w-1/6 mr-7 mb-4 cursor-pointer"><h4 class="relative top-0.1 font-bold text-color3">Cinza</h4></div>
+                    <div class="filtroCor border-transparent border-2 border-teal-400 bg-red-900 h-5 w-1/6 mr-7 mb-4 cursor-pointer"><h4 class="relative top-0.1 font-bold text-color3">Vermelho</h4></div>
+                    <div class="filtroCor border-transparent border-2 border-teal-400 bg-green-900 h-5 w-1/6 mr-7 mb-4 cursor-pointer"><h4 class="relative top-0.1 font-bold text-color3">Verde</h4></div>
+                    <div class="filtroCor border-transparent border-2 border-teal-400 bg-blue-900 h-5 w-1/6 mr-7 mb-4 cursor-pointer"><h4 class="relative top-0.1 font-bold text-color3">Azul</h4></div>
+                </div>
+                <div class="h-px w-width-300px bg-zinc-300 relative my-5 right-1.5"></div>
+                <div class="flex pb-4">
+                    <img class="mr-2" src="./img/filtros/icone-marca.svg" alt="Ícone localização do estado">
+                    <h4 class="font-archivo text-lg text-color1">Marca</h4>
+                </div>
+                <div class="flex flex-wrap w-56 justify-between text-center">
+                    <div class="filtroMarca h-16 border-transparent border-2 border-teal-400 flex flex-col w-12 h-12 mb-4 cursor-pointer">
+                        <img src="./img/filtros/icone-chevrolet.svg" alt="">
+                        <h5 class="text-color1 text-font-10px font-archivo">Chevrolet</h5>
+                    </div>
+                    <div class="filtroMarca h-16 border-transparent border-2 border-teal-400 flex flex-col w-12 h-12 mb-4 cursor-pointer">
+                        <img src="./img/filtros/icone-fiat.svg" alt="">
+                        <h5 class="text-color1 text-font-10px font-archivo">Fiat</h5>
+                    </div>
+                    <div class="filtroMarca h-16 border-transparent border-2 border-teal-400 flex flex-col w-12 h-12 mb-4 cursor-pointer">
+                        <img src="./img/filtros/icone-ford.svg" alt="">
+                        <h5 class="text-color1 text-font-10px font-archivo">Ford</h5>
+                    </div>
+                    <div class="filtroMarca h-16 border-transparent border-2 border-teal-400 flex flex-col w-12 h-12 mb-4 cursor-pointer">
+                        <img src="./img/filtros/icone-honda.svg" alt="">
+                        <h5 class="text-color1 text-font-10px font-archivo">Honda</h5>
+                    </div>
+                    <div class="filtroMarca h-16 border-transparent border-2 border-teal-400 flex flex-col w-12 h-12 mb-4 cursor-pointer">
+                        <img src="./img/filtros/icone-mitsubishi.svg" alt="">
+                        <h5 class="text-color1 text-font-10px font-archivo">Mitsubishi</h5>
+                    </div>
+                    <div class="filtroMarca h-16 border-transparent border-2 border-teal-400 flex flex-col w-12 h-12 mb-4 cursor-pointer">
+                        <img src="./img/filtros/icone-volkswagen.svg" alt="">
+                        <h5 class="text-color1 text-font-10px font-archivo">Volkswagem</h5>
+                    </div>
+                    <div class="filtroMarca h-16 border-transparent border-2 border-teal-400 flex flex-col w-12 h-12 mb-4 cursor-pointer">
+                        <img src="./img/filtros/icone-toyota.svg" alt="">
+                        <h5 class="text-color1 text-font-10px font-archivo">Toyota</h5>
+                    </div>
+                    <div class="filtroMarca h-16 border-transparent border-2 border-teal-400 flex flex-col w-12 h-12 mb-4 cursor-pointer">
+                        <img src="./img/filtros/icone-hyundai.svg" alt="">
+                        <h5 class="text-color1 text-font-10px font-archivo">Hyundai</h5>
+                    </div>
+                </div>
+                <div class="h-px w-width-300px bg-zinc-300 relative my-5 right-1.5"></div>
+                <div class="flex pb-4">
+                    <img class="mr-2" src="./img/filtros/icone-calendario.svg" alt="Ícone localização do estado">
+                    <h4 class="font-archivo text-lg text-color1">Ano</h4>
+                </div>
+                <div class="flex">
+                    <div>
+                        <input
+                            class="mb-2 inputAno border border-color1 rounded-full w-24 h-8 font-archivo text-font-10px p-3 outline-none mr-4"
+                            placeholder="de" type="text" pattern="\d*" maxlength="4">
+                        <h5 class="text-left text-font-10px text-color1 font-archivo">ex.: 2010</h5>
+                    </div>
+                    <div>
+                        <input
+                            class="mb-2 inputAno border border-color1 rounded-full w-24 h-8 font-archivo text-font-10px p-3 outline-none"
+                            placeholder="ate" type="text" pattern="\d*" maxlength="4">
+                        <h5 class="text-left text-font-10px text-color1 font-archivo">ex.: 2018</h5>
+                    </div>
+                </div>
+                <div class="h-px w-width-300px bg-zinc-300 relative my-5 right-1.5"></div>
+                <div class="flex pb-4">
+                    <img class="mr-2" src="./img/filtros/icone-sifrao.svg" alt="Ícone localização do estado">
+                    <h4 class="font-archivo text-lg text-color1">Preço</h4>
+                </div>
+                <div class="flex">
+                    <div>
+                        <input
+                            class="mb-2 inputPreco border border-color1 rounded-full w-24 h-8 font-archivo text-font-10px p-3 outline-none mr-4"
+                            placeholder="de" type="text" pattern="\d*" maxlength="13">
+                        <h5 class="text-left text-font-10px text-color1 font-archivo">ex.: 12.000</h5>
+                    </div>
+                    <div>
+                        <input
+                            class="mb-2 inputPreco border border-color1 rounded-full w-24 h-8 font-archivo text-font-10px p-3 outline-none"
+                            placeholder="ate" type="text" pattern="\d*" maxlength="13">
+                        <h5 class="text-left text-font-10px text-color1 font-archivo">ex.: 48.000</h5>
+                    </div>
+                </div>
+            </section>
+            <div class="p-8 w-screen bg-color4">
+                <div class="max-w-90% justify-start flex flex-wrap items-center text-color3 p-6 font-archivo mb-6 rounded-full border bg-color4" id="btnFiltroSessao">
+                    <h3 class="mr-2">Filtros:</h3>
+                </div>
+                <section class="flex justify-around flex-wrap" id="sessao-carros">
+            </div>
+            </section>
+        </div>
+        </div>
+    </main>
+    <footer class="h-28 bg-teal-400 flex items-center justify-center font-archivo flex-col">
+        <h3 class="mb-2">Desenvolvido por <span class="font-bold"><a target="_blank"
+                    href="https://allessandrogomes.github.io/portfolio/">Alessandro Gomes</a></span> &copy; 2023</h3>
+        <div class="w-14 flex">
+            <a target="_blank" class="mr-3" href="https://github.com/allessandrogomes"><img
+                    src="./img/footer/github-icon.png" alt="Ícone Github"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/alessandro-da-silva-gomes-a82286240/"><img
+                    src="./img/footer/linkedin-icon.png" alt="Ícone Linkedin"></a>
+        </div>
+    </footer>
+    <script src="./main.js"></script>
+    <script src="./exibirOsCarros.js"></script>
+    <script src="./js/botoes-estado/CorFiltroEstado.js"></script>
+    <script src="./js/botoes-estado/AdicionaFiltroEstado.js"></script>
+    <script src="./js/botoes-estado/RemoveFiltroPeloXEstado.js"></script>
+    <script src="./js/botoes-cor/BordaFiltroCor.js"></script>
+    <script src="./js/botoes-marca/BordaFiltroMarca.js"></script>
+    <script src="./js/filtros-ano/FormatacaoAnoFiltro.js"></script>
+    <script src="./js/filtros-preco/FormatacaoPrecoFiltro.js"></script>
+</body>
+
+</html>

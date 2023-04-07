@@ -1,0 +1,82 @@
+[
+    {
+        "nome": "chevrolet onix",
+        "preco": "82.490",
+        "ano": "2023/2023",
+        "km": "8690",
+        "cidade": "campinas",
+        "estado": "sp",
+        "imagem": "https://i.ibb.co/tmFS4Br/chevrolet-onix.webp",
+        "cor": "branco"
+    },
+    {
+        "nome": "fiat argo",
+        "preco": "78.590",
+        "ano": "2023/2023",
+        "km": "8430",
+        "cidade": "sao paulo",
+        "estado": "sp",
+        "imagem": "https://i.ibb.co/HTQQS2h/fiat-argo.jpg",
+        "cor": "cinza"
+    },
+    {
+        "nome": "ford ranger",
+        "preco": "329.990",
+        "ano": "2023/2023",
+        "km": "0",
+        "cidade": "belo horizonte",
+        "estado": "mg",
+        "imagem": "https://i.ibb.co/WVYdsPn/ford-ranger.jpg",
+        "cor": "azul"
+    },
+    {
+        "nome": "honda civic",
+        "preco": "244.900",
+        "ano": "2021/2021",
+        "km": "1420",
+        "cidade": "maceió",
+        "estado": "al",
+        "imagem": "https://i.ibb.co/GF4W7xM/honda-civic.webp",
+        "cor": "branco"
+    },
+    {
+        "nome": "mitsubishi lancer",
+        "preco": "69.992",
+        "ano": "2022/2022",
+        "km": "460",
+        "cidade": "salvador",
+        "estado": "ba",
+        "imagem": "https://i.ibb.co/ZfGXFZ2/mitsubishi-lancer.jpg",
+        "cor": "verde"
+    },
+    {
+        "nome": "volkswagem nivus",
+        "preco": "85.890",
+        "ano": "2020/2020",
+        "km": "9392",
+        "cidade": "porto alegre",
+        "estado": "rs",
+        "imagem": "https://i.ibb.co/sQx4P8n/volkswagem-nivus.webp",
+        "cor": "vermelho"
+    },
+    {
+        "nome": "toyota corolla",
+        "preco": "92.936",
+        "ano": "2018/2018",
+        "km": "1290",
+        "cidade": "são luís",
+        "estado": "ma",
+        "imagem": "https://i.ibb.co/sWqBVR4/toyota-corola.jpg",
+        "cor": "preto"
+    },
+    {
+        "nome": "hyundai tucson",
+        "preco": "138.900",
+        "ano": "2019/2019",
+        "km": "2380",
+        "cidade": "petrolina",
+        "estado": "pe",
+        "imagem": "https://i.ibb.co/d7LpH7c/hyundai-tucson.jpg",
+        "cor": "branco"
+    }
+]
