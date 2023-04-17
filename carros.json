@@ -1,6 +1,7 @@
 [
     {
         "nome": "chevrolet onix",
+        "marca": "chevrolet",
         "preco": "82.490",
         "ano": "2023/2023",
         "km": "8690",
@@ -11,6 +12,7 @@
     },
     {
         "nome": "fiat argo",
+        "marca": "fiat",
         "preco": "78.590",
         "ano": "2023/2023",
         "km": "8430",
@@ -21,6 +23,7 @@
     },
     {
         "nome": "ford ranger",
+        "marca": "ford",
         "preco": "329.990",
         "ano": "2023/2023",
         "km": "0",
@@ -31,6 +34,7 @@
     },
     {
         "nome": "honda civic",
+        "marca": "honda",
         "preco": "244.900",
         "ano": "2021/2021",
         "km": "1420",
@@ -41,6 +45,7 @@
     },
     {
         "nome": "mitsubishi lancer",
+        "marca": "mitsubishi",
         "preco": "69.992",
         "ano": "2022/2022",
         "km": "460",
@@ -51,6 +56,7 @@
     },
     {
         "nome": "volkswagem nivus",
+        "marca": "volkswagem",
         "preco": "85.890",
         "ano": "2020/2020",
         "km": "9392",
@@ -61,6 +67,7 @@
     },
     {
         "nome": "toyota corolla",
+        "marca": "toyota",
         "preco": "92.936",
         "ano": "2018/2018",
         "km": "1290",
@@ -71,6 +78,7 @@
     },
     {
         "nome": "hyundai tucson",
+        "marca": "hyundai",
         "preco": "138.900",
         "ano": "2019/2019",
         "km": "2380",
