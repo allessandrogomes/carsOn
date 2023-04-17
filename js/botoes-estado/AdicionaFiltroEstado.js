@@ -26,7 +26,7 @@ btnsEstado.forEach((btnEstado) => {
             // o estado não está na lista, adicionar a div correspondente
             localASerInseridoOFiltro.innerHTML += `
             <div class="btnFiltroFilho estado flex m-2 justify-center items-center w-36 h-10 bg-white text-center rounded-full shadow-md">
-                <p class="valorFiltro uppercase">${estadoClicado}</p>
+                <p class="valorFiltro valorFiltroEstado uppercase">${estadoClicado}</p>
                 <button class="btnRemoverFiltro relative left-10"><img src="./img/filtros/btn-remover.svg" alt=""></button>
             </div>
             `

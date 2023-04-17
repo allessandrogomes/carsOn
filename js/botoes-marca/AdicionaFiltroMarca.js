@@ -24,8 +24,8 @@ btnsFiltroMarca.forEach((btnFiltroMarca) => {
         } else {
             // o marca não está na lista, adicionar a div correspondente
             localASerInseridoOFiltro.innerHTML += `
-            <div class="btnFiltroFilho estado flex m-2 justify-center items-center w-36 h-10 bg-white text-center rounded-full shadow-md">
-                <p class="valorFiltro uppercase">${marcaClicada}</p>
+            <div class="btnFiltroFilho marca flex m-2 justify-center items-center w-36 h-10 bg-white text-center rounded-full shadow-md">
+                <p class="valorFiltro filtroMarca valorFiltroMarca uppercase">${marcaClicada}</p>
                 <button class="btnRemoverFiltro relative left-10"><img src="./img/filtros/btn-remover.svg" alt=""></button>
             </div>
             `
@@ -36,5 +36,6 @@ btnsFiltroMarca.forEach((btnFiltroMarca) => {
         }
         const btnsRemoverFiltro = document.querySelectorAll('.btnRemoverFiltro')
         removerFiltroPeloX()
+        filtrarCarros()
     })
 })

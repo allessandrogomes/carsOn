@@ -1,5 +1,5 @@
 let cardsCarros = []
-const ednPointDaAPI = 'https://raw.githubusercontent.com/allessandrogomes/carson/main/carros.json'
+const ednPointDaAPI = 'https://raw.githubusercontent.com/allessandrogomes/carsOn/main/carros.json'
 getBuscarCarrosDaAPI()
 
 async function getBuscarCarrosDaAPI() {
