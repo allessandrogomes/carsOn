@@ -25,10 +25,9 @@ btnsEstado.forEach((btnEstado) => {
         } else {
             // o estado não está na lista, adicionar a div correspondente
             localASerInseridoOFiltro.innerHTML += `
-            <div
-                class="btnFiltroFilho flex mb-2 mr-2 justify-center w-36 h-10 bg-white text-center pt-2 rounded-full shadow-md">
-                <p class="valorFiltro uppercase w-3/4 pl-2.5">${estadoClicado}</p>
-                <button class="btnRemoverFiltro w-1/4 pb-2" data-btnRemove="sp"><img src="./img/filtros/btn-remover.svg" alt=""></button>
+            <div class="btnFiltroFilho estado flex m-2 justify-center items-center w-36 h-10 bg-white text-center rounded-full shadow-md">
+                <p class="valorFiltro uppercase">${estadoClicado}</p>
+                <button class="btnRemoverFiltro relative left-10"><img src="./img/filtros/btn-remover.svg" alt=""></button>
             </div>
             `
 
@@ -37,5 +36,6 @@ btnsEstado.forEach((btnEstado) => {
         }
         const btnsRemoverFiltro = document.querySelectorAll('.btnRemoverFiltro')
         removerFiltroPeloX()
+        filtrarCarros()
     })
 })

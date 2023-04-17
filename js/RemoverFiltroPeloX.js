@@ -12,6 +12,7 @@ function removerFiltroPeloX() {
             })
             const filtro = e.target.parentElement.parentElement;
             filtro.remove();
+            filtrarCarros()
         });
     });
 }

@@ -24,9 +24,9 @@ btnsFiltroCor.forEach((btnFiltroCor) => {
         } else {
             // o cor não está na lista, adicionar a div correspondente
             localASerInseridoOFiltro.innerHTML += `
-            <div class="btnFiltroFilho flex mb-2 mr-2 justify-center w-36 h-10 bg-white text-center pt-2 rounded-full shadow-md">
-                <p class="filtroCor uppercase w-3/4 pl-2.5">${corClicada}</p>
-                <button class="btnRemoverFiltro w-1/4 pb-2" data-btnRemove="sp"><img src="./img/filtros/btn-remover.svg" alt=""></button>
+            <div class="btnFiltroFilho estado flex m-2 justify-around px-3 items-center w-40 h-10 bg-white rounded-full shadow-md">
+                <p class="valorFiltro uppercase filtroCor text-center">${corClicada}</p>
+                <button class="btnRemoverFiltro" ><img src="./img/filtros/btn-remover.svg" alt=""></button>
             </div>
             `
 
