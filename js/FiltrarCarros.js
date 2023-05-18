@@ -1,39 +1,33 @@
-
 function filtrarCarros() {
-    const filtrosAtivosEstado = document.querySelectorAll('.valorFiltroEstado')
-    var arrayFiltrosAtivosEstado = []
-    filtrosAtivosEstado.forEach((filtroAtivoEstado) => {
-        arrayFiltrosAtivosEstado.push(filtroAtivoEstado.innerHTML)
+    var estadosSelecionados = [];
+    btnsEstado.forEach((btnEstado) => {
+        if (btnEstado.classList.contains('border-2')) {
+            estadosSelecionados.push(btnEstado.querySelector('h5').innerHTML)    
+        }
     })
-    const filtrosAtivosCor = document.querySelectorAll('.valorFiltroCor')
-    var arrayFiltrosAtivosCor = []
-    filtrosAtivosCor.forEach((filtroAtivoCor) => {
-        arrayFiltrosAtivosCor.push(filtroAtivoCor.innerHTML)
+    var coresSelecionadas = [];
+    btnsFiltroCor.forEach((btnCor) => {
+        if (btnCor.classList.contains('border-2')) {
+            coresSelecionadas.push(btnCor.querySelector('h5').innerHTML)    
+        }
     })
-    const filtrosAtivosMarca = document.querySelectorAll('.valorFiltroMarca')
-    var arrayFiltrosAtivosMarca = []
-    filtrosAtivosMarca.forEach((filtroAtivoMarca) => {
-        arrayFiltrosAtivosMarca.push(filtroAtivoMarca.innerHTML)
+    var marcasSelecionadas = [];
+    btnsFiltroMarca.forEach((btnMarca) => {
+        if (btnMarca.classList.contains('border-2')) {
+            marcasSelecionadas.push(btnMarca.querySelector('h5').innerHTML)    
+        }
+    })
+    
+    var carrosFiltrados = cardsCarros.filter(function(carro) {
+        return  (estadosSelecionados.length === 0 || estadosSelecionados.includes(carro.estado)) &&
+                (coresSelecionadas.length === 0 || coresSelecionadas.includes(carro.cor)) &&
+                (marcasSelecionadas.length === 0 || marcasSelecionadas.includes(carro.marca));
     })
 
-    var carrosFiltradosEstado = cardsCarros.filter(carro => arrayFiltrosAtivosEstado.some(filtro => carro.estado.includes(filtro)));
-    var carrosFiltradosCor = cardsCarros.filter(carro => arrayFiltrosAtivosCor.some(filtro => carro.cor.includes(filtro)));
-    var carrosFiltradosMarca = cardsCarros.filter(carro => arrayFiltrosAtivosMarca.some(filtro => carro.marca.includes(filtro)));
-    var carrosFiltradoTeste = carrosFiltradosEstado.filter(carroEstado => {
-        return carrosFiltradosCor.some(carroCor => carroEstado.nome === carroCor.nome);
-      });
-    exibirOsCarros(carrosFiltradoTeste)
+    if (carrosFiltrados.length > 0) {
+        exibirOsCarros(carrosFiltrados)
+    } else {
+        sessaoCarros.innerHTML = ''
+        sessaoCarros.innerHTML += `<h3>Não existe nenhum veículo dentre os filtros selecionados.<h3>`
+    }
 }
-
-// if(filtrosAtivos == '') {
-//     exibirOsCarros(cardsCarros)
-// } else if (carrosFiltradosCor == '') {
-//     sessaoCarros.innerHTML = `
-//         <h2>Não existe carro para esse filtro selecionado</h2>
-//     `
-// } else {
-//     exibirOsCarros(carrosFiltradosCor)
-// }
-
-
-//var carrosFiltradosEstado = cardsCarros.filter(carro => filtrosAtivos.some(filtro => carro.estado.includes(filtro)));

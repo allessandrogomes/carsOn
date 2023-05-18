@@ -36,6 +36,5 @@ btnsFiltroMarca.forEach((btnFiltroMarca) => {
         }
         const btnsRemoverFiltro = document.querySelectorAll('.btnRemoverFiltro')
         removerFiltroPeloX()
-        filtrarCarros()
     })
 })

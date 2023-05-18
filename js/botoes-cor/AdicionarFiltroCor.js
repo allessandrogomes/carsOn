@@ -36,6 +36,5 @@ btnsFiltroCor.forEach((btnFiltroCor) => {
         }
         const btnsRemoverFiltro = document.querySelectorAll('.btnRemoverFiltro')
         removerFiltroPeloX()
-        filtrarCarros()
     })
 })

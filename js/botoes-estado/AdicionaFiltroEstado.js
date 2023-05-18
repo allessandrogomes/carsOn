@@ -36,6 +36,5 @@ btnsEstado.forEach((btnEstado) => {
         }
         const btnsRemoverFiltro = document.querySelectorAll('.btnRemoverFiltro')
         removerFiltroPeloX()
-        filtrarCarros()
     })
 })
