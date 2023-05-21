@@ -2,7 +2,7 @@
     {
         "nome": "chevrolet onix",
         "marca": "chevrolet",
-        "preco": "82.490",
+        "preco": 82490,
         "ano": "2023",
         "km": "8690",
         "cidade": "campinas",
@@ -13,7 +13,7 @@
     {
         "nome": "fiat argo",
         "marca": "fiat",
-        "preco": "78.590",
+        "preco": 78590,
         "ano": "2021",
         "km": "8430",
         "cidade": "sao paulo",
@@ -24,7 +24,7 @@
     {
         "nome": "ford ranger",
         "marca": "ford",
-        "preco": "329.990",
+        "preco": 329990,
         "ano": "2022",
         "km": "0",
         "cidade": "belo horizonte",
@@ -35,7 +35,7 @@
     {
         "nome": "honda civic",
         "marca": "honda",
-        "preco": "244.900",
+        "preco": 244900,
         "ano": "2022",
         "km": "1420",
         "cidade": "maceió",
@@ -46,7 +46,7 @@
     {
         "nome": "mitsubishi lancer",
         "marca": "mitsubishi",
-        "preco": "69.992",
+        "preco": 69992,
         "ano": "2020",
         "km": "460",
         "cidade": "salvador",
@@ -57,7 +57,7 @@
     {
         "nome": "volkswagem nivus",
         "marca": "volkswagem",
-        "preco": "85.890",
+        "preco": 85890,
         "ano": "2020",
         "km": "9392",
         "cidade": "porto alegre",
@@ -68,7 +68,7 @@
     {
         "nome": "toyota corolla",
         "marca": "toyota",
-        "preco": "92.936",
+        "preco": 92936,
         "ano": "2018",
         "km": "1290",
         "cidade": "são luís",
@@ -79,7 +79,7 @@
     {
         "nome": "hyundai tucson",
         "marca": "hyundai",
-        "preco": "138.900",
+        "preco": 138900,
         "ano": "2019",
         "km": "2380",
         "cidade": "petrolina",
