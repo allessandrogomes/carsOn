@@ -14,7 +14,7 @@ function exibirOsCarros(listaDeCarros) {
                                 </h3>
                                 <h4 class="ml-4 mb-1 text-lg font-bold font-big-shoulders-display">R$ ${carro.preco}</h4>
                                 <div class="flex mb-3">
-                                    <h4 class="ml-4 mr-6 font-archivo text-sm">${carro.ano}</h4>
+                                    <h4 class="ml-4 mr-6 font-archivo text-sm">${carro.ano}&#47;${carro.ano}</h4>
                                     <h4 class="font-archivo text-sm">${carro.km}km</h4>
                                 </div>
                                 <h4 class="ml-4 mb-4 font-archivo text-sm capitalize">${carro.cidade} - <span class="estadoCarro uppercase">${carro.estado}</span></h4>

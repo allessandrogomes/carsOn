@@ -17,11 +17,22 @@ function filtrarCarros() {
             marcasSelecionadas.push(btnMarca.querySelector('h5').innerHTML)    
         }
     })
-    
+
+    var inputAnoDe = document.getElementById("inputAnoDe").value
+    var inputAnoAte = document.getElementById("inputAnoAte").value
+    var inputPrecoDe = document.getElementById("inputPrecoDe").value.replace(/\./g, "")
+    var inputPrecoAte = document.getElementById("inputPrecoAte").value.replace(/\./g, "")
+    console.log(inputPrecoDe)
+    console.log(inputPrecoAte)
+
     var carrosFiltrados = cardsCarros.filter(function(carro) {
         return  (estadosSelecionados.length === 0 || estadosSelecionados.includes(carro.estado)) &&
                 (coresSelecionadas.length === 0 || coresSelecionadas.includes(carro.cor)) &&
-                (marcasSelecionadas.length === 0 || marcasSelecionadas.includes(carro.marca));
+                (marcasSelecionadas.length === 0 || marcasSelecionadas.includes(carro.marca)) &&
+                (inputAnoDe.length === 0 || inputAnoDe <= carro.ano) &&
+                (inputAnoAte.length === 0 || inputAnoAte >= carro.ano || inputAnoAte == 0) &&
+                (inputPrecoDe.length === 0 || inputPrecoDe <= carro.preco) &&
+                (inputPrecoAte.length === 0 || inputPrecoAte >= carro.preco || inputPrecoAte == 0)
     })
 
     if (carrosFiltrados.length > 0) {

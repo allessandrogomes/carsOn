@@ -3,6 +3,7 @@ function somenteNumeros(input) {
     const value = event.target.value;
 
     event.target.value = value.replace(/\D/g, '');
+    filtrarCarros()
   });
 }
 
