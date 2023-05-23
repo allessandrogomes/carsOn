@@ -22,8 +22,6 @@ function filtrarCarros() {
     var inputAnoAte = document.getElementById("inputAnoAte").value
     var inputPrecoDe = document.getElementById("inputPrecoDe").value.replace(/\./g, "")
     var inputPrecoAte = document.getElementById("inputPrecoAte").value.replace(/\./g, "")
-    console.log(inputPrecoDe)
-    console.log(inputPrecoAte)
 
     var carrosFiltrados = cardsCarros.filter(function(carro) {
         return  (estadosSelecionados.length === 0 || estadosSelecionados.includes(carro.estado)) &&

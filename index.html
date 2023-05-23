@@ -62,12 +62,17 @@
     <header class="h-28 bg-teal-400 flex justify-between items-center px-6">
         <div class="flex justify-around around w-1/2">
             <img class="h-12 cursor-pointer" src="./img/header/carson-logo.svg" alt="Cars On Logo">
-            <div class="w-1/2 flex items-center ">
-                <input class="w-full h-12 rounded-full p-4 font-archivo text-sm outline-none"
-                    placeholder="Digite um modelo ou marca..." type="text" style="background-position-x: 95%;">
-                <a href="#" class="text-gray-600 hover:text-gray-800 relative right-7">
-                    <img class="bg-white" src="./img/header/lupa.svg" alt="">
-                </a>
+            <div class="w-1/2 items-center h-12" id="divInputDePesquisa">
+                <div class="flex items-center ">
+                    <input class="w-full h-12 rounded-full p-4 font-archivo text-sm outline-none"
+                        placeholder="Digite um modelo ou marca..." type="text" style="background-position-x: 95%;"
+                        id="barraDePesquisa" onkeyup="mostrarSugestoes()">
+
+                    <a href="#" class="text-gray-600 hover:text-gray-800 relative right-7">
+                        <img class="bg-white" src="./img/header/lupa.svg" alt="Imagem de Lupa de pesquisa" id="lupaDePesquisa">
+                    </a>
+                </div>
+                <ul id="listaDeSugestao"></ul>
             </div>
         </div>
         <div class="flex justify-around w-96">
@@ -97,20 +102,62 @@
                     <h4 class="font-archivo text-lg text-color1">Escolha o seu estado</h4>
                 </div>
                 <div class="flex flex-wrap w-72">
-                    <div class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer"><h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">sp</h5></div>
-                    <div class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer"><h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">rj</h5></div>
-                    <div class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer"><h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">mt</h5></div>
-                    <div class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer"><h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">mg</h5></div>
-                    <div class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer"><h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">al</h5></div>
-                    <div class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer"><h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">ba</h5></div>
-                    <div class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer"><h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">rs</h5></div>
-                    <div class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer"><h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">ma</h5></div>
-                    <div class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer"><h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">am</h5></div>
-                    <div class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer"><h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">to</h5></div>
-                    <div class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer"><h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">go</h5></div>
-                    <div class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer"><h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">pi</h5></div>
-                    <div class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer"><h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">pe</h5></div>
-                    <div class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer"><h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">ac</h5></div>
+                    <div
+                        class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer">
+                        <h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">sp</h5>
+                    </div>
+                    <div
+                        class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer">
+                        <h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">rj</h5>
+                    </div>
+                    <div
+                        class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer">
+                        <h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">mt</h5>
+                    </div>
+                    <div
+                        class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer">
+                        <h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">mg</h5>
+                    </div>
+                    <div
+                        class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer">
+                        <h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">al</h5>
+                    </div>
+                    <div
+                        class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer">
+                        <h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">ba</h5>
+                    </div>
+                    <div
+                        class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer">
+                        <h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">rs</h5>
+                    </div>
+                    <div
+                        class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer">
+                        <h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">ma</h5>
+                    </div>
+                    <div
+                        class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer">
+                        <h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">am</h5>
+                    </div>
+                    <div
+                        class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer">
+                        <h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">to</h5>
+                    </div>
+                    <div
+                        class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer">
+                        <h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">go</h5>
+                    </div>
+                    <div
+                        class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer">
+                        <h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">pi</h5>
+                    </div>
+                    <div
+                        class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer">
+                        <h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">pe</h5>
+                    </div>
+                    <div
+                        class="borda btnEstado border-color2 flex justify-center items-center text-center mr-1 mb-1 w-9 h-9 cursor-pointer">
+                        <h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">ac</h5>
+                    </div>
                 </div>
                 <div class="h-px w-width-300px bg-zinc-300 relative my-5 right-1.5"></div>
                 <div class="flex pb-4">
@@ -118,12 +165,24 @@
                     <h4 class="font-archivo text-lg text-color1">Cor</h4>
                 </div>
                 <div class="text-font-10px text-center flex flex-wrap w-80">
-                    <div class="borda filtroCorBtn border-color2 bg-slate-100 h-5 w-1/6 mr-7 mb-4 cursor-pointer"><h5 class="filtroCorBtnValor  font-bold text-color3 capitalize">branco</h5></div>
-                    <div class="borda filtroCorBtn border-color2 bg-zinc-950 h-5 w-1/6 mr-7 mb-4 cursor-pointer"><h5 class="filtroCorBtnValor font-bold  text-color3 capitalize">preto</h5></div>
-                    <div class="borda filtroCorBtn border-color2 bg-zinc-700 h-5 w-1/6 mr-7 mb-4 cursor-pointer"><h5 class="filtroCorBtnValor  font-bold text-color3 capitalize">cinza</h5></div>
-                    <div class="borda filtroCorBtn border-color2 bg-red-900 h-5 w-1/6 mr-7 mb-4 cursor-pointer"><h5 class="filtroCorBtnValor  font-bold text-color3 capitalize">vermelho</h5></div>
-                    <div class="borda filtroCorBtn border-color2 bg-green-900 h-5 w-1/6 mr-7 mb-4 cursor-pointer"><h5 class="filtroCorBtnValor  font-bold text-color3 capitalize">verde</h5></div>
-                    <div class="borda filtroCorBtn border-color2 bg-blue-900 h-5 w-1/6 mr-7 mb-4 cursor-pointer"><h5 class="filtroCorBtnValor  font-bold text-color3 capitalize">azul</h5></div>
+                    <div class="borda filtroCorBtn border-color2 bg-slate-100 h-5 w-1/6 mr-7 mb-4 cursor-pointer">
+                        <h5 class="filtroCorBtnValor  font-bold text-color3 capitalize">branco</h5>
+                    </div>
+                    <div class="borda filtroCorBtn border-color2 bg-zinc-950 h-5 w-1/6 mr-7 mb-4 cursor-pointer">
+                        <h5 class="filtroCorBtnValor font-bold  text-color3 capitalize">preto</h5>
+                    </div>
+                    <div class="borda filtroCorBtn border-color2 bg-zinc-700 h-5 w-1/6 mr-7 mb-4 cursor-pointer">
+                        <h5 class="filtroCorBtnValor  font-bold text-color3 capitalize">cinza</h5>
+                    </div>
+                    <div class="borda filtroCorBtn border-color2 bg-red-900 h-5 w-1/6 mr-7 mb-4 cursor-pointer">
+                        <h5 class="filtroCorBtnValor  font-bold text-color3 capitalize">vermelho</h5>
+                    </div>
+                    <div class="borda filtroCorBtn border-color2 bg-green-900 h-5 w-1/6 mr-7 mb-4 cursor-pointer">
+                        <h5 class="filtroCorBtnValor  font-bold text-color3 capitalize">verde</h5>
+                    </div>
+                    <div class="borda filtroCorBtn border-color2 bg-blue-900 h-5 w-1/6 mr-7 mb-4 cursor-pointer">
+                        <h5 class="filtroCorBtnValor  font-bold text-color3 capitalize">azul</h5>
+                    </div>
                 </div>
                 <div class="h-px w-width-300px bg-zinc-300 relative my-5 right-1.5"></div>
                 <div class="flex pb-4">
@@ -173,13 +232,15 @@
                     <div>
                         <input
                             class="mb-2 inputAno border border-color1 rounded-full w-24 h-8 font-archivo text-font-10px p-3 outline-none mr-4"
-                            placeholder="de" type="text" pattern="\d*" maxlength="4" id="inputAnoDe" inputmode="numeric">
+                            placeholder="de" type="text" pattern="\d*" maxlength="4" id="inputAnoDe"
+                            inputmode="numeric">
                         <h5 class="text-left text-font-10px text-color1 font-archivo">ex.: 2010</h5>
                     </div>
                     <div>
                         <input
                             class="mb-2 inputAno border border-color1 rounded-full w-24 h-8 font-archivo text-font-10px p-3 outline-none"
-                            placeholder="ate" type="text" pattern="\d*" maxlength="4" id="inputAnoAte" inputmode="numeric">
+                            placeholder="ate" type="text" pattern="\d*" maxlength="4" id="inputAnoAte"
+                            inputmode="numeric">
                         <h5 class="text-left text-font-10px text-color1 font-archivo">ex.: 2018</h5>
                     </div>
                 </div>
@@ -192,19 +253,22 @@
                     <div>
                         <input
                             class="mb-2 inputPreco border border-color1 rounded-full w-24 h-8 font-archivo text-font-10px p-3 outline-none mr-4"
-                            placeholder="de" type="text" pattern="\d*" maxlength="13" id="inputPrecoDe" inputmode="numeric">
+                            placeholder="de" type="text" pattern="\d*" maxlength="13" id="inputPrecoDe"
+                            inputmode="numeric">
                         <h5 class="text-left text-font-10px text-color1 font-archivo">ex.: 12.000</h5>
                     </div>
                     <div>
                         <input
                             class="mb-2 inputPreco border border-color1 rounded-full w-24 h-8 font-archivo text-font-10px p-3 outline-none"
-                            placeholder="ate" type="text" pattern="\d*" maxlength="13" id="inputPrecoAte" inputmode="numeric">
+                            placeholder="ate" type="text" pattern="\d*" maxlength="13" id="inputPrecoAte"
+                            inputmode="numeric">
                         <h5 class="text-left text-font-10px text-color1 font-archivo">ex.: 48.000</h5>
                     </div>
                 </div>
             </section>
             <div class="p-8 w-screen bg-color4">
-                <div class="filtroSessao max-w-90% justify-start flex flex-wrap items-center text-color3 p-6 font-archivo mb-6 rounded-full border bg-color4" id="btnFiltroSessao">
+                <div class="filtroSessao max-w-90% justify-start flex flex-wrap items-center text-color3 p-6 font-archivo mb-6 rounded-full border bg-color4"
+                    id="btnFiltroSessao">
                     <h3 class="mr-2">Filtros:</h3>
                 </div>
                 <section class="flex justify-around flex-wrap" id="sessao-carros">
@@ -233,7 +297,8 @@
     <script src="./js/FiltrarCarros.js"></script>
     <script src="./js/filtros-ano/FormatacaoAnoFiltro.js"></script>
     <script src="./js/filtros-preco/FormatacaoPrecoFiltro.js"></script>
-    
+    <script src="./js/PesquisaPorModelo.js"></script>
+
 </body>
 
 </html>
