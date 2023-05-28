@@ -28,7 +28,9 @@
 
                     },
                     height: {
-                        '400': '400px'
+                        '400': '400px',
+                        '600': '600px',
+                        '70%': '70%'
                     },
                     fontSize: {
                         'font-56px': '56px',
@@ -37,13 +39,15 @@
                     width: {
                         'width-340px': '340px',
                         'width-300px': '300px',
-                        'width-7%': '7%'
+                        'width-7%': '7%',
+                        'width-600px': '600px'
                     },
                     colors: {
                         'color1': '#0B2926',
                         'color2': '#38BCAC',
                         'color3': '#A4B3B5',
-                        'color4': '#FAFAFA'
+                        'color4': '#FAFAFA',
+                        'cor-desfoque': 'rgba(0, 0, 0, 0.5)'
                     },
                     borderRadius: {
                         'borde-radius-32px': '32px'
@@ -76,8 +80,67 @@
             </div>
         </div>
         <div class="flex justify-around w-96">
-            <button
-                class="bg-white h-12 w-32 rounded-full text-teal-400 font-bold hover:text-teal-500 transition delay-75 ease-in-out">Anunciar</button>
+            <button class="bg-white h-12 w-32 rounded-full text-teal-400 font-bold hover:text-teal-500 transition delay-75 ease-in-out" id="botaoAnunciar">
+                Anunciar
+            </button>
+            <div class="hidden fixed top-0 left-0 w-full h-full bg-cor-desfoque backdrop-blur" id="fundoDesfocado"></div>
+            <div class="hidden fixed rounded top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-width-600px h-600 bg-teal-400 p-5" id="telaDeAnuncio">
+                <span class="w-8 absolute top-2.5 right-2.5 cursor-pointer" id="fecharTelaDeAnuncio"><img src="./img/body/botao-fechar.png" alt="Botão fechar tela de Anúncio"></span>
+                <h2 class="font-bold font-archivo text-black text-center mt-10 text-2xl">Anunciar na CarsOn</h2>
+                <p class="text-center mt-5 font-archivo">Preencha as informações do veículo</p>
+                <form class="flex flex-col h-4/6 flex-wrap mt-10 mx-10 items-center" action="#">
+                    <label class="w-48 font-bold font-archivo" for="inputAnunciarMarca">Marca</label>
+                    <select class="w-48 h-6 rounded font-archivo font-bold mb-4 informacaoCarro" required id="marca">
+                        <option class="font-archivo capitalize" value="chevrolet">Chevrolet</option>
+                        <option class="font-archivo capitalize" value="fiat">Fiat</option>
+                        <option class="font-archivo capitalize" value="ford">Ford</option>
+                        <option class="font-archivo capitalize" value="honda">Honda</option>
+                        <option class="font-archivo capitalize" value="mitsubishi">Mitsubishi</option>
+                        <option class="font-archivo capitalize" value="volkswagem">Volkswagem</option>
+                        <option class="font-archivo capitalize" value="toyota">Toyota</option>
+                        <option class="font-archivo capitalize" value="hyundai">Hyundai</option>
+                    </select>
+                    <label class="w-48 font-bold font-archivo" for="inputAnunciarModelo">Modelo</label>
+                    <input class="w-48 rounded mb-4 outline-none px-2 py-1 font-bold font-archivo informacaoCarro" required maxlength="15" type="text" id="nome">
+                    <label class="w-48 font-bold font-archivo" for="inputAnunciarPreco">Preço</label>
+                    <input class="w-48 rounded mb-4 outline-none px-2 py-1 font-bold font-archivo inputPreco informacaoCarro" required maxlength="10" type="text" id="preco">
+                    <label class="w-48 font-bold font-archivo" for="inputAnunciarAno">Ano</label>
+                    <input class="w-48 rounded mb-4 outline-none px-2 py-1 font-bold font-archivo inputAno informacaoCarro" required maxlength="4" type="text" id="ano">
+                    <label class="w-48 font-bold font-archivo" for="inputAnunciarKm">Km</label>
+                    <input class="w-48 rounded mb-4 outline-none px-2 py-1 font-bold font-archivo inputAno informacaoCarro" required maxlength="6" type="text" id="km">
+                    <label class="w-48 font-bold font-archivo" for="inputAnunciarCidade">Cidade</label>
+                    <input class="w-48 rounded mb-4 outline-none px-2 py-1 font-bold font-archivo informacaoCarro" required maxlength="25" type="text" id="cidade">
+                    <label class="w-48 font-bold font-archivo" for="inputAnunciarEstado">Estado</label>
+                    <select class="w-48 h-6 rounded font-archivo font-bold mb-4 informacaoCarro" required id="estado">
+                        <option class="font-archivo" value="AC">Acre</option>
+                        <option class="font-archivo" value="SP">São Paulo</option>
+                        <option class="font-archivo" value="RJ">Rio de Janeiro</option>
+                        <option class="font-archivo" value="MT">Mato Grosso</option>
+                        <option class="font-archivo" value="MG">Minas Gerais</option>
+                        <option class="font-archivo" value="AL">Alagoas</option>
+                        <option class="font-archivo" value="BA">Bahia</option>
+                        <option class="font-archivo" value="RS">Rio Grande do Sul</option>
+                        <option class="font-archivo" value="MA">Maranhão</option>
+                        <option class="font-archivo" value="AM">Amazonas</option>
+                    </select>
+                    <label class="w-48 font-bold font-archivo" for="inputAnunciarImagemUrl">Url imagem do veículo</label>
+                    <input class="w-48 rounded mb-4 outline-none px-2 py-1 font-bold font-archivo informacaoCarro" required type="text" id="imagem">
+                    <label class="w-48 font-bold font-archivo" for="inputAnunciarCor">Cor</label>
+                    <select class="w-48 h-6 rounded font-archivo font-bold mb-8 informacaoCarro" required id="cor">
+                        <option class="font-archivo capitalize" value="branco">Branco</option>
+                        <option class="font-archivo capitalize" value="cinza">Cinza</option>
+                        <option class="font-archivo capitalize" value="azul">Azul</option>
+                        <option class="font-archivo capitalize" value="verde">Verde</option>
+                        <option class="font-archivo capitalize" value="vermelho">Vermelho</option>
+                        <option class="font-archivo capitalize" value="preto">Preto</option>
+                    </select>
+                    <button id="btnAnunciarNovoCarro" class="border-2 p-4 border-color2 bg-white text-color2 font-archivo font-bold rounded-full">Anunciar</button>
+                </form>
+            </div>
+            <div id="telaAnuncioPublicado" class="hidden flex gap-6 flex-col items-center justify-center fixed rounded top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-width-600px h-600 bg-teal-400 p-5">
+                <h2 class="h-8 font-bold font-archivo text-black text-center text-2xl">Seu anúncio foi publicado com sucesso!</h2>
+                <button id="btnAnunciarOk" class="w-32 uppercase border-2 p-4 border-color1 bg-color4 text-color1 font-archivo font-bold">Ok</button>
+            </div>
             <div class="flex w-24 h-10 items-center justify-between">
                 <h5 class="text-white font-normal cursor-pointer hover:font-medium transition delay-75 ease-in-out">Chat
                 </h5>
@@ -159,7 +222,7 @@
                         <h5 class="btnEstadoValor w-full text-zinc-400 uppercase font-archivo">ac</h5>
                     </div>
                 </div>
-                <div class="h-px w-width-300px bg-zinc-300 relative my-5 right-1.5"></div>
+                <div class="h-px w-width-300px bg-zinc-300 my-5"></div>
                 <div class="flex pb-4">
                     <img class="mr-2" src="./img/filtros/icone-cor.svg" alt="Ícone localização do estado">
                     <h4 class="font-archivo text-lg text-color1">Cor</h4>
@@ -184,7 +247,7 @@
                         <h5 class="filtroCorBtnValor  font-bold text-color3 capitalize">azul</h5>
                     </div>
                 </div>
-                <div class="h-px w-width-300px bg-zinc-300 relative my-5 right-1.5"></div>
+                <div class="h-px w-width-300px bg-zinc-300 my-5"></div>
                 <div class="flex pb-4">
                     <img class="mr-2" src="./img/filtros/icone-marca.svg" alt="Ícone localização do estado">
                     <h4 class="font-archivo text-lg text-color1">Marca</h4>
@@ -223,7 +286,7 @@
                         <h5 class="text-color1 text-font-10px font-archivo capitalize">hyundai</h5>
                     </div>
                 </div>
-                <div class="h-px w-width-300px bg-zinc-300 relative my-5 right-1.5"></div>
+                <div class="h-px w-width-300px bg-zinc-300 my-5"></div>
                 <div class="flex pb-4">
                     <img class="mr-2" src="./img/filtros/icone-calendario.svg" alt="Ícone localização do estado">
                     <h4 class="font-archivo text-lg text-color1">Ano</h4>
@@ -244,7 +307,7 @@
                         <h5 class="text-left text-font-10px text-color1 font-archivo">ex.: 2018</h5>
                     </div>
                 </div>
-                <div class="h-px w-width-300px bg-zinc-300 relative my-5 right-1.5"></div>
+                <div class="h-px w-width-300px bg-zinc-300 my-5"></div>
                 <div class="flex pb-4">
                     <img class="mr-2" src="./img/filtros/icone-sifrao.svg" alt="Ícone localização do estado">
                     <h4 class="font-archivo text-lg text-color1">Preço</h4>
@@ -298,6 +361,8 @@
     <script src="./js/filtros-ano/FormatacaoAnoFiltro.js"></script>
     <script src="./js/filtros-preco/FormatacaoPrecoFiltro.js"></script>
     <script src="./js/PesquisaPorModelo.js"></script>
+    <script src="./js/BotaoAnunciar.js"></script>
+    <script src="./js/AnunciarNovoCarro.js"></script>
 
 </body>
 

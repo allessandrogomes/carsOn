@@ -19,7 +19,7 @@ function exibirOsCarros(listaDeCarros) {
                                 </div>
                                 <h4 class="ml-4 mb-4 font-archivo text-sm capitalize">${carro.cidade} - <span class="estadoCarro uppercase">${carro.estado}</span></h4>
                                 <button
-                                    class="text-color1 font-bold font-archivo relative left-4 px-14 py-2 rounded-borde-radius-32px border border-color3">Comprar</button>
+                                    class="text-color1 font-bold font-archivo ml-4 px-14 py-2 rounded-borde-radius-32px border border-color3">Comprar</button>
                             </div>
                         </div>
                     </div>
