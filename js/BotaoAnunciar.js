@@ -1,29 +1,32 @@
+//Mostra a tela de anunciar ao clicar
 var botaoAnunciar = document.getElementById("botaoAnunciar")
 var fundoDesfocado = document.getElementById("fundoDesfocado")
 var telaDeAnuncio = document.getElementById("telaDeAnuncio")
-//Mostra a tela de anunciar ao clicar
 botaoAnunciar.addEventListener("click", () => {
     fundoDesfocado.classList.remove("hidden")
     telaDeAnuncio.classList.remove("hidden")
+    resetaValorDosInputsAnunciar()
 })
 
-var botaoFecharTelaDeAnuncio = document.getElementById("fecharTelaDeAnuncio")
 //Remove a tela de Anunciar ao clicar no "X"
+var botaoFecharTelaDeAnuncio = document.getElementById("fecharTelaDeAnuncio")
 botaoFecharTelaDeAnuncio.addEventListener("click", () => {
     fundoDesfocado.classList.add("hidden")
     telaDeAnuncio.classList.add("hidden")
 })
 
-//Remove tela de Anuncio e mostra tela de Anuncio publicado com sucesso
-btnAnunciarNovoCarro.addEventListener("click", () => {
+//Remove a tela de Anunciar e mostra a tela de anuncio publicado
+const telaAnuncioPublicado = document.getElementById("telaAnuncioPublicado")
+function mostraTelaDeAnuncioPublicado() {
     telaDeAnuncio.classList.add("hidden")
     telaAnuncioPublicado.classList.remove("hidden")
-})
+}
 
-const botaoAnunciarOk = document.getElementById("btnAnunciarOk")
-const telaAnuncioPublicado = document.getElementById("telaAnuncioPublicado")
 //Remove a tela de Anuncio Publicado ao clicar no Ok
+const botaoAnunciarOk = document.getElementById("btnAnunciarOk")
 botaoAnunciarOk.addEventListener("click", () => {
     telaAnuncioPublicado.classList.add("hidden")
     fundoDesfocado.classList.add("hidden")
 })
+
+
