@@ -40,7 +40,8 @@
                         'width-340px': '340px',
                         'width-300px': '300px',
                         'width-7%': '7%',
-                        'width-600px': '600px'
+                        'width-600px': '600px',
+                        'width-400px': '400px'
                     },
                     colors: {
                         'color1': '#0B2926',
@@ -54,6 +55,9 @@
                     },
                     maxWidth: {
                         '90%': '90%'
+                    },
+                    spacing: {
+                        '73.7': '73.7%'
                     }
                 }
             }
@@ -73,19 +77,25 @@
                         id="barraDePesquisa" onkeyup="mostrarSugestoes()">
 
                     <a href="#" class="text-gray-600 hover:text-gray-800 relative right-7">
-                        <img class="bg-white" src="./img/header/lupa.svg" alt="Imagem de Lupa de pesquisa" id="lupaDePesquisa">
+                        <img class="bg-white" src="./img/header/lupa.svg" alt="Imagem de Lupa de pesquisa"
+                            id="lupaDePesquisa">
                     </a>
                 </div>
                 <ul id="listaDeSugestao"></ul>
             </div>
         </div>
         <div class="flex justify-around w-96">
-            <button class="bg-white h-12 w-32 rounded-full text-teal-400 font-bold hover:text-teal-500 transition delay-75 ease-in-out" id="botaoAnunciar">
+            <button
+                class="bg-white h-12 w-32 rounded-full text-teal-400 font-bold hover:text-teal-500 transition delay-75 ease-in-out"
+                id="botaoAnunciar">
                 Anunciar
             </button>
-            <div class="hidden fixed top-0 left-0 w-full h-full bg-cor-desfoque backdrop-blur" id="fundoDesfocado"></div>
-            <div class="hidden fixed rounded top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-width-600px h-600 bg-teal-400 p-5" id="telaDeAnuncio">
-                <span class="w-8 absolute top-2.5 right-2.5 cursor-pointer" id="fecharTelaDeAnuncio"><img src="./img/body/botao-fechar.png" alt="Botão fechar tela de Anúncio"></span>
+            <div class="hidden fixed top-0 left-0 w-full h-full bg-cor-desfoque backdrop-blur" id="fundoDesfocado">
+            </div>
+            <div class="hidden fixed rounded top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-width-600px h-600 bg-teal-400 p-5"
+                id="telaDeAnuncio">
+                <span class="w-8 absolute top-2.5 right-2.5 cursor-pointer" id="fecharTelaDeAnuncio"><img
+                        src="./img/body/botao-fechar.png" alt="Botão fechar tela de Anúncio"></span>
                 <h2 class="font-bold font-archivo text-black text-center mt-10 text-2xl">Anunciar na CarsOn</h2>
                 <p class="text-center mt-5 font-archivo">Preencha as informações do veículo</p>
                 <form class="flex flex-col h-4/6 flex-wrap mt-10 mx-10 items-center" action="#">
@@ -101,15 +111,23 @@
                         <option class="font-archivo capitalize" value="hyundai">Hyundai</option>
                     </select>
                     <label class="w-48 font-bold font-archivo" for="inputAnunciarModelo">Modelo</label>
-                    <input class="w-48 rounded mb-4 outline-none px-2 py-1 font-bold font-archivo informacaoCarro" required maxlength="15" type="text" id="nome">
+                    <input class="w-48 rounded mb-4 outline-none px-2 py-1 font-bold font-archivo informacaoCarro"
+                        required maxlength="15" type="text" id="nome">
                     <label class="w-48 font-bold font-archivo" for="inputAnunciarPreco">Preço</label>
-                    <input class="w-48 rounded mb-4 outline-none px-2 py-1 font-bold font-archivo inputPreco informacaoCarro" required maxlength="10" type="text" id="preco">
+                    <input
+                        class="w-48 rounded mb-4 outline-none px-2 py-1 font-bold font-archivo inputPreco informacaoCarro"
+                        required maxlength="10" type="text" id="preco">
                     <label class="w-48 font-bold font-archivo" for="inputAnunciarAno">Ano</label>
-                    <input class="w-48 rounded mb-4 outline-none px-2 py-1 font-bold font-archivo inputAno informacaoCarro" required maxlength="4" type="text" id="ano">
+                    <input
+                        class="w-48 rounded mb-4 outline-none px-2 py-1 font-bold font-archivo inputAno informacaoCarro"
+                        required maxlength="4" type="text" id="ano">
                     <label class="w-48 font-bold font-archivo" for="inputAnunciarKm">Km</label>
-                    <input class="w-48 rounded mb-4 outline-none px-2 py-1 font-bold font-archivo inputAno informacaoCarro" required maxlength="6" type="text" id="km">
+                    <input
+                        class="w-48 rounded mb-4 outline-none px-2 py-1 font-bold font-archivo inputAno informacaoCarro"
+                        required maxlength="6" type="text" id="km">
                     <label class="w-48 font-bold font-archivo" for="inputAnunciarCidade">Cidade</label>
-                    <input class="w-48 rounded mb-4 outline-none px-2 py-1 font-bold font-archivo informacaoCarro" required maxlength="25" type="text" id="cidade">
+                    <input class="w-48 rounded mb-4 outline-none px-2 py-1 font-bold font-archivo informacaoCarro"
+                        required maxlength="25" type="text" id="cidade">
                     <label class="w-48 font-bold font-archivo" for="inputAnunciarEstado">Estado</label>
                     <select class="w-48 h-6 rounded font-archivo font-bold mb-4 informacaoCarro" required id="estado">
                         <option class="font-archivo" value="AC">Acre</option>
@@ -123,8 +141,10 @@
                         <option class="font-archivo" value="MA">Maranhão</option>
                         <option class="font-archivo" value="AM">Amazonas</option>
                     </select>
-                    <label class="w-48 font-bold font-archivo" for="inputAnunciarImagemUrl">Url imagem do veículo</label>
-                    <input class="w-48 rounded mb-4 outline-none px-2 py-1 font-bold font-archivo informacaoCarro" required type="text" id="imagem">
+                    <label class="w-48 font-bold font-archivo" for="inputAnunciarImagemUrl">Url imagem do
+                        veículo</label>
+                    <input class="w-48 rounded mb-4 outline-none px-2 py-1 font-bold font-archivo informacaoCarro"
+                        required type="text" id="imagem">
                     <label class="w-48 font-bold font-archivo" for="inputAnunciarCor">Cor</label>
                     <select class="w-48 h-6 rounded font-archivo font-bold mb-8 informacaoCarro" required id="cor">
                         <option class="font-archivo capitalize" value="branco">Branco</option>
@@ -134,22 +154,83 @@
                         <option class="font-archivo capitalize" value="vermelho">Vermelho</option>
                         <option class="font-archivo capitalize" value="preto">Preto</option>
                     </select>
-                    <button id="btnAnunciarNovoCarro" class="border-2 p-4 border-color2 bg-white text-color2 font-archivo font-bold rounded-full">Anunciar</button>
+                    <button id="btnAnunciarNovoCarro"
+                        class="border-2 p-4 border-color2 bg-white text-color2 font-archivo font-bold rounded-full">Anunciar</button>
                 </form>
             </div>
-            <div id="telaAnuncioPublicado" class="hidden flex gap-6 flex-col items-center justify-center fixed rounded top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-width-600px h-600 bg-teal-400 p-5">
-                <h2 class="h-8 font-bold font-archivo text-black text-center text-2xl">Seu anúncio foi publicado com sucesso!</h2>
-                <button id="btnAnunciarOk" class="w-32 uppercase border-2 p-4 border-color1 bg-color4 text-color1 font-archivo font-bold">Ok</button>
+            <div id="telaAnuncioPublicado"
+                class="hidden flex gap-6 flex-col items-center justify-center fixed rounded top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-width-600px h-600 bg-teal-400 p-5">
+                <h2 class="h-8 font-bold font-archivo text-black text-center text-2xl">Seu anúncio foi publicado com
+                    sucesso!</h2>
+                <button id="btnAnunciarOk"
+                    class="w-32 uppercase border-2 p-4 border-color1 bg-color4 text-color1 font-archivo font-bold">Ok</button>
             </div>
             <div class="flex w-24 h-10 items-center justify-between">
                 <h5 class="text-white font-normal cursor-pointer hover:font-medium transition delay-75 ease-in-out">Chat
                 </h5>
                 <img class="h-10 cursor-pointer" src="./img/header/message.svg" alt="Imagem Chat">
             </div>
-            <div class="flex w-24 h-10 items-center justify-between">
+            <div class="flex w-24 h-10 items-center justify-between" id="botaoLogin">
                 <h5 class="text-white font-normal cursor-pointer hover:font-medium transition delay-75 ease-in-out">
                     Entrar</h5>
                 <img class="h-10 cursor-pointer" src="./img/header/user.svg" alt="Imagem Chat">
+            </div>
+            <div id="telaEntrar" class="hidden flex flex-col items-center fixed rounded top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-width-400px h-96 bg-teal-400 p-5">
+                <span class="w-8 absolute top-2.5 right-2.5 cursor-pointer" id="fecharTelaDeLogin"><img src="./img/body/botao-fechar.png" alt="Botão fechar tela de Login"></span>
+                <h2 class="font-bold font-archivo text-black text-center mb-2 mt-4 text-2xl">Login</h2>
+                <h3 class="font-archivo text-center text-xs underline mb-6 cursor-pointer" id="btnCadastrar">Não possuo cadastro</h3>
+                <div class="flex flex-col">
+                    <label class="w-48 font-bold font-archivo mr-2 text-sm" for="emailEntrar">Email</label>
+                    <input id="emailEntrar" class="w-48 rounded mb-4 outline-none px-2 py-1 text-sm font-archivo" type="email">
+                </div>
+                <div class="flex flex-col mb-10">
+                    <label class="w-48 font-bold font-archivo mr-2 text-sm" for="senhaEntrar">Senha</label>
+                    <input id="senhaEntrar" class="w-48 rounded outline-none mb-1 px-2 py-1 text-sm font-archivo" type="password">
+                    <p id="btnEsqueciMinhaSenha" class="font-archivo text-xs cursor-pointer underline">Esqueci minha senha</p>
+                </div>
+                <button class="font-archivo border-2 p-3 bg-color4 rounded">Entrar</button>
+            </div>
+            <div id="telaDeCadastro" class="hidden flex gap-10 flex-col items-center fixed rounded top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-width-600px h-600 bg-teal-400 p-5">
+                <span class="w-8 absolute top-2.5 right-2.5 cursor-pointer" id="fecharTelaDeCadastro"><img src="./img/body/botao-fechar.png" alt="Botão fechar tela de Login"></span>
+                <h2 class="font-bold font-archivo text-black text-center mb-2 mt-4 text-2xl">Cadastro</h2>
+                <div class="w-11/12 h-3/4">
+                    <form action="#" class="flex h-full w-full flex-col flex-wrap">
+                    <label class="font-bold font-archivo mr-2 text-sm" for="cadastroNomeCompleto">Nome completo</label>
+                    <input class="mb-4 w-5/12 outline-none rounded font-archivo px-2 py-1 inputCadastro" id="cadastroNomeCompleto" type="text" required>
+                    <label class="font-bold font-archivo mr-2 text-sm" for="cadastroNascimento">Nascimento</label>
+                    <input class="mb-4 w-5/12 outline-none rounded font-archivo px-2 py-1 inputCadastro" type="date" required>
+                    <label class="font-bold font-archivo mr-2 text-sm" for="cadastroContato">Contato</label>
+                    <input class="mb-4 w-5/12 outline-none rounded font-archivo px-2 py-1 inputCadastro" id="cadastroContato" type="text" minlength="15" maxlength="15" placeholder="(xx) xxxxx-xxxx" required>         
+                    <label class="font-bold font-archivo mr-2 text-sm" for="cadastroEmail">Email</label>
+                    <input class="mb-4 w-5/12 outline-none rounded font-archivo px-2 py-1 inputCadastro" type="email" name="" id="cadastroEmail" required>
+                    <label class="font-bold font-archivo mr-2 text-sm" for="cadastroCep">CEP</label>
+                    <input class="mb-4 w-5/12 outline-none rounded font-archivo px-2 py-1 inputCadastro" id="cadastroCep" type="text" maxlength="8" minlength="8" required>
+                    <div class="absolute top-73.7" id="erroCep"></div>
+                    <label class="font-bold font-archivo mr-2 text-sm" for="cadastroEndereco">Endereço</label>
+                    <input class="mb-4 w-5/12 outline-none rounded font-archivo px-2 py-1 inputCadastro" id="cadastroEndereco" type="text" required>
+                    <label class="font-bold font-archivo mr-2 text-sm" for="cadastroNumerodaCasa">N° da casa</label>
+                    <input class="mb-4 w-5/12 outline-none rounded font-archivo px-2 py-1 inputCadastro" id="cadastroNumeroDaCasa" type="text" maxlength="6" required>
+                    <label class="font-bold font-archivo mr-2 text-sm" for="cadastroComplemento">Complemento</label>
+                    <input class="mb-4 w-5/12 outline-none rounded font-archivo px-2 py-1 inputCadastro" id="cadastroComplemento" type="text" required>
+                    <label class="font-bold font-archivo mr-2 text-sm" for="cadastroBairro">Bairro</label>
+                    <input class="mb-4 w-5/12 outline-none rounded font-archivo px-2 py-1 inputCadastro" id="cadastroBairro" type="text" required>
+                    <label class="font-bold font-archivo mr-2 text-sm" for="cadastroCidade">Cidade</label>
+                    <input class="mb-4 w-5/12 outline-none rounded font-archivo px-2 py-1 inputCadastro" id="cadastroCidade" type="text" required>
+                    <label class="font-bold font-archivo mr-2 text-sm" for="cadastroEstado">UF</label>
+                    <input class="mb-10 w-5/12 outline-none rounded font-archivo px-2 py-1 inputCadastro" id="cadastroEstado" type="text" required readonly>
+                    <button class="font-archivo border-2 p-2 bg-color4 rounded" id="btnRealizarCadastro">Realizar cadastro</button>
+                    </form>
+                </div>
+            </div>
+            <div class="hidden flex flex-col items-center fixed rounded top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-width-400px h-96 bg-teal-400 p-5" id="telaEsqueciMinhaSenha">
+                <span class="w-8 absolute top-2.5 right-2.5 cursor-pointer" id="fecharTelaEsqueciMinhaSenha"><img src="./img/body/botao-fechar.png" alt="Botão fechar tela de Login"></span>
+                <h2 class="font-bold font-archivo text-black text-center mb-2 mt-4 text-2xl">Recuperação de senha</h2>
+                <h3 class="font-archivo text-center text-xs mb-6 w-3/4" id="btnCadastrar">Por favor, insira o seu endereço de e-mail no campo abaixo e clique em "Enviar". Certifique-se de fornecer o e-mail correto, pois enviaremos todas as informações necessárias para esse endereço.</h3>
+                <div class="flex flex-col mb-5">
+                    <label class="w-48 font-bold font-archivo mr-2 text-sm" for="emailEntrar">Email</label>
+                    <input id="emailEntrar" class="w-48 rounded mb-4 outline-none px-2 py-1 text-sm font-archivo" type="email">
+                </div>
+                <button class="font-archivo border-2 p-2 bg-color4 rounded" id="btnRealizarCadastro">Enviar</button>
             </div>
         </div>
     </header>
@@ -363,6 +444,14 @@
     <script src="./js/PesquisaPorModelo.js"></script>
     <script src="./js/BotaoAnunciar.js"></script>
     <script src="./js/AnunciarNovoCarro.js"></script>
+    <script src="./js/BotaoLogin.js"></script>
+    <script src="./js/FormatacaoContatoTelefone.js"></script>
+    <script src="./js/FormatacaoApenasLetras.js"></script>
+    <script src="./js/FormatacaoSomenteNumeros.js"></script>
+    <script src="./js/TelaDeCadastro.js"></script>
+    <script src="./js/BuscaEnderecoCep.js"></script>
+    <script src="./js/ResetaValorDosInputs.js"></script>
+    <script src="./js/TelaEsqueciMinhaSenha.js"></script>
 
 </body>
 

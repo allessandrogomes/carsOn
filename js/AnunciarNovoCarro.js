@@ -2,7 +2,7 @@ const inputsAnunciarNovoCarro = document.querySelectorAll(".informacaoCarro")
 
 
 const btnAnunciarNovoCarro = document.getElementById("btnAnunciarNovoCarro")
-resetaValorDosInputsAnunciar()
+resetaValorDosInputs(inputsAnunciarNovoCarro)
 
 btnAnunciarNovoCarro.addEventListener("click", () => {
     var carroASerAdicionadoObj = {}
@@ -28,9 +28,3 @@ btnAnunciarNovoCarro.addEventListener("click", () => {
         mostraTelaDeAnuncioPublicado()
     }
 })
-
-function resetaValorDosInputsAnunciar() {
-    inputsAnunciarNovoCarro.forEach((input) => {
-        input.value = ""
-    })
-}
