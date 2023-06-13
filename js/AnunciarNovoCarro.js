@@ -4,7 +4,8 @@ const inputsAnunciarNovoCarro = document.querySelectorAll(".informacaoCarro")
 const btnAnunciarNovoCarro = document.getElementById("btnAnunciarNovoCarro")
 resetaValorDosInputs(inputsAnunciarNovoCarro)
 
-btnAnunciarNovoCarro.addEventListener("click", () => {
+btnAnunciarNovoCarro.addEventListener("click", (e) => {
+    e.preventDefault()
     var carroASerAdicionadoObj = {}
     var inputVazio = false
     //Guarda os valores dos inputs no objeto carroASerAdicionado

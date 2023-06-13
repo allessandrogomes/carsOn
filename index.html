@@ -41,7 +41,8 @@
                         'width-300px': '300px',
                         'width-7%': '7%',
                         'width-600px': '600px',
-                        'width-400px': '400px'
+                        'width-400px': '400px',
+                        '12%': '12%'
                     },
                     colors: {
                         'color1': '#0B2926',
@@ -57,7 +58,10 @@
                         '90%': '90%'
                     },
                     spacing: {
-                        '73.7': '73.7%'
+                        '73.7': '73.7%',
+                        '74': '74%',
+                        '5%': '5%',
+                        '93': '93%'
                     }
                 }
             }
@@ -90,6 +94,22 @@
                 id="botaoAnunciar">
                 Anunciar
             </button>
+            <div id="telaChat" class="hidden flex flex-col items-center fixed rounded top-1/2 left-74 transform w-width-400px h-96 bg-white">
+                <span class="w-8 absolute top-2.5 right-2.5 cursor-pointer" id="fecharTelaChat"><img src="./img/body/botao-fechar.png" alt="Botão fechar tela de Login"></span>
+                <div class="flex items-center justify-center w-full h-16 bg-color2 rounded-t" id="topoChat">
+                    <h3 class="font-archivo font-bold text-white">CarsOn - Chat Online</h3>
+                </div>
+                <div id="chatMensagens" class="w-full h-4/6 bg-gray-100 overflow-y-auto">
+                    <div class="flex items-center m-2">
+                        <img class="w-1/6" src="./img/chat/icon-bot.png" alt="Ícone usuário bot">
+                        <div class="font-archivo bg-color2 p-2 rounded"><p>Olá, em que posso ajudar?</p></div>            
+                    </div>
+                </div>
+                <div class="w-full h-1/6 rounded-b">
+                    <input id="inputMensagemChat" class="h-full w-full outline-none p-2 rounded-b font-archivo" placeholder="Escreva sua mensagem" type="text">
+                    <img id="btnEnviarMensagemChat" class="absolute bottom-5 left-93 w-6 cursor-pointer" src="./img/chat/icon-send-menssage.png" alt="Ícone enviar mensagem">
+                </div>
+            </div>
             <div class="hidden fixed top-0 left-0 w-full h-full bg-cor-desfoque backdrop-blur" id="fundoDesfocado">
             </div>
             <div class="hidden fixed rounded top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-width-600px h-600 bg-teal-400 p-5"
@@ -165,7 +185,7 @@
                 <button id="btnAnunciarOk"
                     class="w-32 uppercase border-2 p-4 border-color1 bg-color4 text-color1 font-archivo font-bold">Ok</button>
             </div>
-            <div class="flex w-24 h-10 items-center justify-between">
+            <div id="btnAbrirChat" class="flex w-24 h-10 items-center justify-between">
                 <h5 class="text-white font-normal cursor-pointer hover:font-medium transition delay-75 ease-in-out">Chat
                 </h5>
                 <img class="h-10 cursor-pointer" src="./img/header/message.svg" alt="Imagem Chat">
@@ -227,8 +247,8 @@
                 <h2 class="font-bold font-archivo text-black text-center mb-2 mt-4 text-2xl">Recuperação de senha</h2>
                 <h3 class="font-archivo text-center text-xs mb-6 w-3/4" id="btnCadastrar">Por favor, insira o seu endereço de e-mail no campo abaixo e clique em "Enviar". Certifique-se de fornecer o e-mail correto, pois enviaremos todas as informações necessárias para esse endereço.</h3>
                 <div class="flex flex-col mb-5">
-                    <label class="w-48 font-bold font-archivo mr-2 text-sm" for="emailEntrar">Email</label>
-                    <input id="emailEntrar" class="w-48 rounded mb-4 outline-none px-2 py-1 text-sm font-archivo" type="email">
+                    <label class="w-48 font-bold font-archivo mr-2 text-sm" for="emailRecuperarSenha">Email</label>
+                    <input id="emailRecuperarSenha" class="w-48 rounded mb-4 outline-none px-2 py-1 text-sm font-archivo" type="email">
                 </div>
                 <button class="font-archivo border-2 p-2 bg-color4 rounded" id="btnRealizarCadastro">Enviar</button>
             </div>
@@ -443,6 +463,7 @@
     <script src="./js/filtros-preco/FormatacaoPrecoFiltro.js"></script>
     <script src="./js/PesquisaPorModelo.js"></script>
     <script src="./js/BotaoAnunciar.js"></script>
+    <script src="./js/ResetaValorDosInputs.js"></script>
     <script src="./js/AnunciarNovoCarro.js"></script>
     <script src="./js/BotaoLogin.js"></script>
     <script src="./js/FormatacaoContatoTelefone.js"></script>
@@ -450,8 +471,9 @@
     <script src="./js/FormatacaoSomenteNumeros.js"></script>
     <script src="./js/TelaDeCadastro.js"></script>
     <script src="./js/BuscaEnderecoCep.js"></script>
-    <script src="./js/ResetaValorDosInputs.js"></script>
     <script src="./js/TelaEsqueciMinhaSenha.js"></script>
+    <script src="./js/EnviarMensagemChat.js"></script>
+    <script src="./js/TelaChat.js"></script>
 
 </body>
 
