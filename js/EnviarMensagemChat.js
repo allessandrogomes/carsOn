@@ -14,12 +14,17 @@ inputMensagemChat.addEventListener("keydown", function (e) {
 })
 
 function mensagemDoUsuario (mensagem) {
-    localAInserirMensagem.innerHTML += `
+    mensagem = mensagem.trim()
+    if (mensagem.length > 0) {
+        localAInserirMensagem.innerHTML += `
         <div class="flex justify-end items-center m-2">
-            <div class="font-archivo bg-color3 p-2 rounded"><p>${mensagem}</p></div> 
+            <p class="font-archivo bg-color3 p-2 rounded break-all max-w-[250px]">${mensagem}</p>
             <img class="w-12% m-3" src="./img/chat/icon-user.png" alt="Ícone usuário bot">
         </div>
     `
     inputMensagemChat.value = ""
     localAInserirMensagem.scrollTop = localAInserirMensagem.scrollHeight
+    } else {
+        inputMensagemChat.value = ""
+    }
 }
