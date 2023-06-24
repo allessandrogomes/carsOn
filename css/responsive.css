@@ -26,6 +26,8 @@
     #listaDeSugestao {
         height: 300px;
         overflow-y: auto;
+        z-index: 1;
+        position: absolute;
     }
     .itemSugestao {
         width: 65%;
