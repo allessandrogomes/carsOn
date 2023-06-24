@@ -10,7 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&family=Big+Shoulders+Display:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./css/responsive.css">
+        <link rel="shortcut icon" href="./img/icon-carson.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -72,7 +72,7 @@
 </head>
 
 <body class="overflow-x-hidden">
-    <header class="fixed w-full h-28 bg-teal-400 flex justify-around items-center">
+    <header class="max-md:fixed w-full h-28 bg-teal-400 flex justify-around items-center">
         <img class="h-12 cursor-pointer" src="./img/header/carson-logo.svg" alt="Cars On Logo">
         <div class="max-md:block cursor-pointer hidden" id="mobileMenu">
             <div class="w-8 h-0.5 bg-white m-2 transition ease-in" id="line1"></div>
@@ -94,23 +94,16 @@
                 <ul id="listaDeSugestao"></ul>
             </div>
             <button
-                class="navListLi bg-white h-12 w-32 rounded-full text-teal-400 font-bold hover:text-teal-500 transition delay-75 ease-in-out"
+                class="zIndex navListLi bg-white h-12 w-32 rounded-full text-teal-400 font-bold hover:text-teal-500 transition delay-75 ease-in-out"
                 id="botaoAnunciar">
                 Anunciar
             </button>
-            <div id="telaAnuncioPublicado"
-                class="hidden flex gap-6 flex-col items-center justify-center fixed rounded top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-width-600px h-600 bg-teal-400 p-5">
-                <h2 class="h-8 font-bold font-archivo text-black text-center text-2xl">Seu anúncio foi publicado com
-                    sucesso!</h2>
-                <button id="btnAnunciarOk"
-                    class="w-32 uppercase border-2 p-4 border-color1 bg-color4 text-color1 font-archivo font-bold">Ok</button>
-            </div>
-            <div id="btnAbrirChat" class="navListLi flex w-[100px] h-10 items-center justify-around">
+            <div id="btnAbrirChat" class="zIndex navListLi flex w-[100px] h-10 items-center justify-around">
                 <h5 class="text-white font-normal cursor-pointer hover:font-medium transition delay-75 ease-in-out">Chat
                 </h5>
                 <img class="h-10 cursor-pointer" src="./img/header/message.svg" alt="Imagem Chat">
             </div>
-            <div class="navListLi flex gap-2 w-[100px] h-10 items-center justify-around" id="botaoLogin">
+            <div class="zIndex navListLi flex gap-2 w-[100px] h-10 items-center justify-around" id="botaoLogin">
                 <h5 class="text-white font-normal cursor-pointer hover:font-medium transition delay-75 ease-in-out">
                     Entrar</h5>
                 <img class="h-10 cursor-pointer" src="./img/header/user.svg" alt="Imagem Chat">
@@ -119,15 +112,22 @@
     <main>
         <div class="hidden fixed top-0 left-0 w-full h-full bg-cor-desfoque backdrop-blur" id="fundoDesfocado">
         </div>
+        <div id="telaAnuncioPublicado"
+                class="hidden flex gap-6 flex-col items-center justify-center fixed rounded top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-width-600px h-600 bg-teal-400 p-5">
+                <h2 class="h-8 font-bold font-archivo text-black text-center text-2xl">Seu anúncio foi publicado com
+                    sucesso!</h2>
+                <button id="btnAnunciarOk"
+                    class="w-32 uppercase border-2 p-4 border-color1 bg-color4 text-color1 font-archivo font-bold">Ok</button>
+            </div>
         <div id="telaDeCadastro" class="hidden flex gap-10 flex-col items-center fixed rounded top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-width-600px h-600 bg-teal-400 p-5">
             <span class="w-8 absolute top-2.5 right-2.5 cursor-pointer" id="fecharTelaDeCadastro"><img src="./img/body/botao-fechar.png" alt="Botão fechar tela de Login"></span>
             <h2 class="font-bold font-archivo text-black text-center mb-2 mt-4 text-2xl">Cadastro</h2>
             <div class="w-11/12 h-3/4">
-                <form action="#" class="flex h-full w-full flex-col flex-wrap">
+                <form id="formCadastro" action="#" class="flex h-full w-full flex-col flex-wrap">
                 <label class="font-bold font-archivo mr-2 text-sm" for="cadastroNomeCompleto">Nome completo</label>
                 <input class="mb-4 w-5/12 outline-none rounded font-archivo px-2 py-1 inputCadastro" id="cadastroNomeCompleto" type="text" required>
                 <label class="font-bold font-archivo mr-2 text-sm" for="cadastroNascimento">Nascimento</label>
-                <input class="mb-4 w-5/12 outline-none rounded font-archivo px-2 py-1 inputCadastro" type="date" required>
+                <input class="nascimento mb-4 w-5/12 outline-none rounded font-archivo px-2 py-1 inputCadastro" type="date" required>
                 <label class="font-bold font-archivo mr-2 text-sm" for="cadastroContato">Contato</label>
                 <input class="mb-4 w-5/12 outline-none rounded font-archivo px-2 py-1 inputCadastro" id="cadastroContato" type="text" minlength="15" maxlength="15" placeholder="(xx) xxxxx-xxxx" required>         
                 <label class="font-bold font-archivo mr-2 text-sm" for="cadastroEmail">Email</label>
@@ -151,7 +151,6 @@
                 </form>
             </div>
         </div>
-    </div>
         <div class="hidden flex flex-col items-center fixed rounded top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-width-400px h-96 bg-teal-400 p-5" id="telaEsqueciMinhaSenha">
             <span class="w-8 absolute top-2.5 right-2.5 cursor-pointer" id="fecharTelaEsqueciMinhaSenha"><img src="./img/body/botao-fechar.png" alt="Botão fechar tela de Login"></span>
             <h2 class="font-bold font-archivo text-black text-center mb-2 mt-4 text-2xl">Recuperação de senha</h2>
@@ -177,13 +176,13 @@
             </div>
             <button class="font-archivo border-2 p-3 bg-color4 rounded">Entrar</button>
         </div>
-        <div class="hidden fixed rounded top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-width-600px h-600 bg-teal-400 p-5"
+        <div class="telaDeAnuncioResponsive hidden fixed rounded top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-width-600px h-600 bg-teal-400 p-5"
                 id="telaDeAnuncio">
                 <span class="w-8 absolute top-2.5 right-2.5 cursor-pointer" id="fecharTelaDeAnuncio"><img
                         src="./img/body/botao-fechar.png" alt="Botão fechar tela de Anúncio"></span>
                 <h2 class="font-bold font-archivo text-black text-center mt-10 text-2xl">Anunciar na CarsOn</h2>
                 <p class="text-center mt-5 font-archivo">Preencha as informações do veículo</p>
-                <form class="flex flex-col h-4/6 flex-wrap mt-10 mx-10 items-center" action="#">
+                <form class="formAnuncioResponsive flex flex-col h-4/6 flex-wrap mt-10 mx-10 items-center" action="#">
                     <label class="w-48 font-bold font-archivo" for="inputAnunciarMarca">Marca</label>
                     <select class="w-48 h-6 rounded font-archivo font-bold mb-4 informacaoCarro" required id="marca">
                         <option class="font-archivo capitalize" value="chevrolet">Chevrolet</option>
@@ -259,12 +258,12 @@
                 <img id="btnEnviarMensagemChat" class="absolute bottom-5 left-93 w-6 cursor-pointer" src="./img/chat/icon-send-menssage.png" alt="Ícone enviar mensagem">
             </div>
         </div>
-        <section class="h-400 bg-banner bg-no-repeat bg-cover bg-teal-400 flex flex-col items-center justify-center">
-            <h1 class="text-font-56px font-big-shoulders-display font-black text-white">Carros é na CarsOn</h1>
-            <h2 class="font-archivo text-white text-2xl font-medium">Compra e venda de veículos</h2>
+        <section class="sectionChamada h-400 bg-banner bg-no-repeat bg-cover bg-teal-400 flex flex-col items-center justify-center">
+            <h1 class="sectionChamadaTitulo text-font-56px font-big-shoulders-display font-black text-white">Carros é na CarsOn</h1>
+            <h2 class="sectionChamadaSubtitulo font-archivo text-white text-2xl font-medium">Compra e venda de veículos</h2>
         </section>
-        <div class="flex">
-            <section class="w-width-340px flex flex-col m-6">
+        <div class="divCentral flex">
+            <section class="sectionFiltros max-md:w-full w-width-340px flex flex-col m-6">
                 <div class="flex pb-4">
                     <img class="mr-2" src="./img/filtros/icone-localizacao.svg" alt="Ícone localização do estado">
                     <h4 class="font-archivo text-lg text-color1">Escolha o seu estado</h4>
@@ -332,7 +331,7 @@
                     <img class="mr-2" src="./img/filtros/icone-cor.svg" alt="Ícone localização do estado">
                     <h4 class="font-archivo text-lg text-color1">Cor</h4>
                 </div>
-                <div class="text-font-10px text-center flex flex-wrap w-80">
+                <div class="divFiltroCor text-font-10px text-center flex flex-wrap w-80">
                     <div class="borda filtroCorBtn border-color2 bg-slate-100 h-5 w-1/6 mr-7 mb-4 cursor-pointer">
                         <h5 class="filtroCorBtnValor  font-bold text-color3 capitalize">branco</h5>
                     </div>
@@ -445,7 +444,7 @@
         </div>
         </div>
     </main>
-    <footer class="h-28 bg-teal-400 flex items-center justify-center font-archivo flex-col">
+    <footer class="text-center h-28 bg-teal-400 flex items-center justify-center font-archivo flex-col">
         <h3 class="mb-2">Desenvolvido por <span class="font-bold"><a target="_blank"
                     href="https://allessandrogomes.github.io/portfolio/">Alessandro Gomes</a></span> &copy; 2023</h3>
         <div class="w-14 flex">
@@ -479,6 +478,7 @@
     <script src="./js/EnviarMensagemChat.js"></script>
     <script src="./js/TelaChat.js"></script>
     <script src="./js/mobile-navbar/MobileNavBar.js"></script>
+    <link rel="stylesheet" href="./css/responsive.css">
 
 </body>
 

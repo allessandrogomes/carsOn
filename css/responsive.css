@@ -1,4 +1,7 @@
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
     .navList {
         position: absolute;
         top: 14vh;
@@ -10,12 +13,87 @@
         align-items: center;
         transform: translateX(100%);
         transition: transform 0.3s ease-in;
+        justify-content: center;
+        gap: 50px;
     }
     .navListLi {
         opacity: 0;
     }
-    body {
-        overflow-x: hidden;
+    .zIndex {
+        z-index: -1;
+    }
+    .itemSugestao {
+        width: 65%;
+    }
+    .telaDeAnuncioResponsive {
+        width: 90%;
+        height: 90%;
+    }
+    .formAnuncioResponsive {
+        flex-wrap: nowrap;
+        overflow-y: auto;
+        width: 100%;
+        margin: 0;
+    }
+    #telaAnuncioPublicado {
+        width: 90%;
+        height: 50%;
+    }
+    #telaAnuncioPublicado h2 {
+        height: auto;
+    }
+    #telaChat {
+        width: 300px;
+    }
+    #telaEntrar {
+        width: 90%;
+    }
+    #telaDeCadastro {
+        width: 90%;
+    }
+    #formCadastro {
+        flex-wrap: nowrap;
+        align-items: center;
+        overflow-y: auto;
+    }
+    #formCadastro input {
+        width: 80%;
+    }
+    #formCadastro .nascimento {
+        padding: 20px;
+    }
+    #telaEsqueciMinhaSenha {
+        width: 90%;
+    }
+    .filtroSessao {
+        display: none;
+    }
+    .divCentral {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+    }
+    .sectionFiltros {
+        margin: 0;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .divFiltroCor {
+        justify-content: center;
+        align-items: center;
+    }
+    .sectionChamada {
+        text-align: center;
+        background-image: none;
+        height: 300px;
+    }
+    .sectionChamadaTitulo {
+        font-size: 35px;
+        margin-top: 50px;
+    }
+    .sectionChamadaSubtitulo {
+        font-size: 20px;
     }
 }
 
