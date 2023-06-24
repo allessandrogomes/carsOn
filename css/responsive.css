@@ -23,6 +23,10 @@
     .zIndex {
         z-index: -1;
     }
+    #listaDeSugestao {
+        height: 300px;
+        overflow-y: auto;
+    }
     .itemSugestao {
         width: 65%;
     }
