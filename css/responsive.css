@@ -2,6 +2,9 @@
     body {
         overflow-x: hidden;
     }
+    header {
+        z-index: 2;
+    }
     .navList {
         position: absolute;
         top: 14vh;
@@ -26,7 +29,7 @@
     #listaDeSugestao {
         height: 300px;
         overflow-y: auto;
-        z-index: 1;
+        z-index: 3;
         position: absolute;
     }
     .itemSugestao {
@@ -35,6 +38,10 @@
     .telaDeAnuncioResponsive {
         width: 90%;
         height: 90%;
+        z-index: 4;
+    }
+    #fundoDesfocado {
+        z-index: 4;
     }
     .formAnuncioResponsive {
         flex-wrap: nowrap;
@@ -51,12 +58,15 @@
     }
     #telaChat {
         width: 300px;
+        z-index: 4;
     }
     #telaEntrar {
         width: 90%;
+        z-index: 4;
     }
     #telaDeCadastro {
         width: 90%;
+        z-index: 4;
     }
     #formCadastro {
         flex-wrap: nowrap;
@@ -71,6 +81,7 @@
     }
     #telaEsqueciMinhaSenha {
         width: 90%;
+        z-index: 4;
     }
     .filtroSessao {
         display: none;
@@ -82,9 +93,38 @@
     }
     .sectionFiltros {
         margin: 0;
-        padding: 10px;
-        justify-content: center;
         align-items: center;
+        position: fixed;
+        top: 20%;
+        overflow-y: auto;
+        background-color: white;
+        height: 70%;
+        justify-content: start;
+        padding: 20px;
+        border-top: 2px solid rgb(45 212 191);
+        border-left: 2px solid rgb(45 212 191);
+        border-bottom: 2px solid rgb(45 212 191);
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        width: 290px;
+        right: 0%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    #btnAbrirFiltrosMobile {
+        position: fixed;
+        top: 50%;
+        right: 0%;
+        transform: rotate(-90deg) translate(0px, 18px);
+        background-color: rgb(45, 212, 191);
+        width: 60px;
+        font-family: 'Archivo';
+        font-weight: bold;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        display: block;
+        transition: transform 0.3s ease-in;
+        z-index: 1;
     }
     .divFiltroCor {
         justify-content: center;
@@ -102,6 +142,15 @@
     .sectionChamadaSubtitulo {
         font-size: 20px;
     }
+}
+
+.sectionFiltros.active {
+    transform: translateX(0%);
+    box-shadow: inset 0px 0px 10px 0px black;
+}
+
+#btnAbrirFiltrosMobile.active {
+    transform: rotate(-90deg) translateY(-1133%);
 }
 
 .navList.active {

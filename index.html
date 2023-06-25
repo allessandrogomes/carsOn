@@ -263,6 +263,8 @@
             <h2 class="sectionChamadaSubtitulo font-archivo text-white text-2xl font-medium">Compra e venda de veículos</h2>
         </section>
         <div class="divCentral flex">
+            <div class="hidden fixed top-0 left-0 w-full h-full bg-cor-desfoque backdrop-blur" id="fundoDesfocadoFiltros"></div>
+            <button id="btnAbrirFiltrosMobile" class="hidden cursor-pointer">Filtros</button>
             <section class="sectionFiltros max-md:w-full w-width-340px flex flex-col m-6">
                 <div class="flex pb-4">
                     <img class="mr-2" src="./img/filtros/icone-localizacao.svg" alt="Ícone localização do estado">
@@ -478,6 +480,7 @@
     <script src="./js/EnviarMensagemChat.js"></script>
     <script src="./js/TelaChat.js"></script>
     <script src="./js/mobile-navbar/MobileNavBar.js"></script>
+    <script src="./js/filtro-responsivo/filtroResponsivoMobile.js"></script>
     <link rel="stylesheet" href="./css/responsive.css">
 
 </body>
